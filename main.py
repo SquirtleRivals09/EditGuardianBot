@@ -34,7 +34,7 @@ def check_edit(update: Update, context: CallbackContext):
     if user_id == OWNER_ID:
         return  # Ignore if owner edits the message
     # Send a message notifying about the deletion
-    bot.send_message(chat_id=chat_id, text=f"{mention} just edited a message🤡. I deleted his edited message🙂‍↕️🤡.")
+    bot.send_message(chat_id=chat_id, text=f"{user_mention} just edited a message🤡. I deleted his edited message🙂‍↕️🤡.")
     bot.delete_message(chat_id=chat_id, message_id=message_id)
 
 def main():
